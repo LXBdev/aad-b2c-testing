@@ -6,7 +6,8 @@ name: IE11 - DataPreload
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ master ]    
+    paths: ie11-datapreload/**
   pull_request:
     branches: [ master ]
     paths: ie11-datapreload/**
