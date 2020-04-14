@@ -9,7 +9,7 @@ on:
     paths: ie11-datapreload/**
 
 env:
-  clientId: 591d586f-3f7e-4345-85d7-60fcf5a5ab9e
+  clientId: f6ac0ba1-bc7b-48cc-8d18-adf7efac86bb
   tenant: aitabeb2c.onmicrosoft.com
 
 jobs:
