@@ -69,6 +69,7 @@ jobs:
   deploy-ui:
     runs-on: ubuntu-latest
     steps:  
+    - uses: actions/checkout@v2
     - name: Deploy UI
       uses: bacongobbler/azure-blob-storage-upload@v1.0.0
       with:
