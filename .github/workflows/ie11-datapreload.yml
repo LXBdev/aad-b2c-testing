@@ -64,3 +64,10 @@ jobs:
         tenant: ${{ env.tenant }}
         clientId: ${{ env.clientId }}
         clientSecret: ${{ secrets.clientSecret }}
+        
+    - name: Deploy UI
+      uses: bacongobbler/azure-blob-storage-upload@v1.0.0
+      with:
+        source_dir: azure-ad-b2c/UI
+        container_name: ie11-datapreload
+        connection_string: ${{ secrets.aitabeb2cui_ConnectionString }}
