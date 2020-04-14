@@ -5,7 +5,8 @@
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
   TenantId="aitabeb2c.onmicrosoft.com"
-  PolicyId="B2C_1A_IE11_Data-Preload_signup_signin">
+  PolicyId="B2C_1A_IE11_Data-Preload_signup_signin"
+  PublicPolicyUri="http://aitabeb2c.onmicrosoft.com/B2C_1A_IE11_DataPreload_signup_signin-Preload_signup_signin">
 
   <BasePolicy>
     <TenantId>aitabeb2c.onmicrosoft.com</TenantId>
