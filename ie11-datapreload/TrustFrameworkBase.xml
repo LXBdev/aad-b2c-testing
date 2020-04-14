@@ -7,7 +7,7 @@
   TenantId="aitabeb2c.onmicrosoft.com"
   PolicyId="B2C_1A_IE11_Data-Preload_TrustFrameworkBase"
   PublicPolicyUri="http://aitabeb2c.onmicrosoft.com/B2C_1A_IE11_Data-Preload_TrustFrameworkBase">
-
+ 
   <BuildingBlocks>
     <ClaimsSchema>
       <!-- The ClaimsSchema is divided into three sections:

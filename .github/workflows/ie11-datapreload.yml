@@ -4,11 +4,11 @@ on:
   push:
     branches: [ master ]    
     paths:
-      - ie11-datapreload/**
+      - 'ie11-datapreload/**'
   pull_request:
     branches: [ master ]
     paths: 
-      - ie11-datapreload/**
+      - 'ie11-datapreload/**'
 
 env:
   clientId: f6ac0ba1-bc7b-48cc-8d18-adf7efac86bb
