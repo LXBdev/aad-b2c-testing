@@ -3,10 +3,12 @@ name: IE11 - DataPreload
 on:
   push:
     branches: [ master ]    
-    paths: ie11-datapreload/**
+    paths:
+      - ie11-datapreload/**
   pull_request:
     branches: [ master ]
-    paths: ie11-datapreload/**
+    paths: 
+      - ie11-datapreload/**
 
 env:
   clientId: f6ac0ba1-bc7b-48cc-8d18-adf7efac86bb
@@ -17,11 +19,48 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    
     - name: Deploy Azure AD B2C TrustFramework Policy
       uses: azure-ad-b2c/deploy-trustframework-policy@v1
       with:
         file: "./ie11-datapreload/TrustFrameworkBase.xml"
         policy: B2C_1A_IE11_Data-Preload_TrustFrameworkBase
+        tenant: ${{ env.tenant }}
+        clientId: ${{ env.clientId }}
+        clientSecret: ${{ secrets.clientSecret }}
+    
+    - name: Deploy Azure AD B2C TrustFramework Policy
+      uses: azure-ad-b2c/deploy-trustframework-policy@v1
+      with:
+        file: "./ie11-datapreload/TrustFrameworkExtensions.xml"
+        policy: B2C_1A_IE11_Data-Preload_TrustFrameworkExtensions
+        tenant: ${{ env.tenant }}
+        clientId: ${{ env.clientId }}
+        clientSecret: ${{ secrets.clientSecret }}
+    
+    - name: Deploy Azure AD B2C TrustFramework Policy
+      uses: azure-ad-b2c/deploy-trustframework-policy@v1
+      with:
+        file: "./ie11-datapreload/SignUpOrSignin.xml"
+        policy: B2C_1A_IE11_Data-Preload_SignUp_Signin
+        tenant: ${{ env.tenant }}
+        clientId: ${{ env.clientId }}
+        clientSecret: ${{ secrets.clientSecret }}
+    
+    - name: Deploy Azure AD B2C TrustFramework Policy
+      uses: azure-ad-b2c/deploy-trustframework-policy@v1
+      with:
+        file: "./ie11-datapreload/ProfileEdit.xml"
+        policy: B2C_1A_IE11_Data-Preload_ProfileEdit
+        tenant: ${{ env.tenant }}
+        clientId: ${{ env.clientId }}
+        clientSecret: ${{ secrets.clientSecret }}
+    
+    - name: Deploy Azure AD B2C TrustFramework Policy
+      uses: azure-ad-b2c/deploy-trustframework-policy@v1
+      with:
+        file: "./ie11-datapreload/PasswordReset.xml"
+        policy: B2C_1A_IE11_Data-Preload_PasswordReset
         tenant: ${{ env.tenant }}
         clientId: ${{ env.clientId }}
         clientSecret: ${{ secrets.clientSecret }}
