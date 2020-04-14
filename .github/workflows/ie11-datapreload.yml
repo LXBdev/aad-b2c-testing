@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Deploy Azure AD B2C TrustFramework Policy
+    - name: Deploy TrustFrameworkBase
       uses: azure-ad-b2c/deploy-trustframework-policy@v1
       with:
         file: "./ie11-datapreload/TrustFrameworkBase.xml"
@@ -29,7 +29,7 @@ jobs:
         clientId: ${{ env.clientId }}
         clientSecret: ${{ secrets.clientSecret }}
     
-    - name: Deploy Azure AD B2C TrustFramework Policy
+    - name: Deploy TrustFrameworkExtensions
       uses: azure-ad-b2c/deploy-trustframework-policy@v1
       with:
         file: "./ie11-datapreload/TrustFrameworkExtensions.xml"
@@ -38,7 +38,7 @@ jobs:
         clientId: ${{ env.clientId }}
         clientSecret: ${{ secrets.clientSecret }}
     
-    - name: Deploy Azure AD B2C TrustFramework Policy
+    - name: Deploy SignUpOrSignin
       uses: azure-ad-b2c/deploy-trustframework-policy@v1
       with:
         file: "./ie11-datapreload/SignUpOrSignin.xml"
@@ -47,7 +47,7 @@ jobs:
         clientId: ${{ env.clientId }}
         clientSecret: ${{ secrets.clientSecret }}
     
-    - name: Deploy Azure AD B2C TrustFramework Policy
+    - name: Deploy ProfileEdit
       uses: azure-ad-b2c/deploy-trustframework-policy@v1
       with:
         file: "./ie11-datapreload/ProfileEdit.xml"
@@ -56,7 +56,7 @@ jobs:
         clientId: ${{ env.clientId }}
         clientSecret: ${{ secrets.clientSecret }}
     
-    - name: Deploy Azure AD B2C TrustFramework Policy
+    - name: Deploy PasswordReset
       uses: azure-ad-b2c/deploy-trustframework-policy@v1
       with:
         file: "./ie11-datapreload/PasswordReset.xml"
