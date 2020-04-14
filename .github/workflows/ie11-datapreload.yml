@@ -5,10 +5,12 @@ on:
     branches: [ master ]    
     paths:
       - 'ie11-datapreload/**'
+      - '.github/workflows/ie11-datapreload.yml' 
   pull_request:
     branches: [ master ]
     paths: 
       - 'ie11-datapreload/**'
+      - '.github/workflows/ie11-datapreload.yml'
 
 env:
   clientId: f6ac0ba1-bc7b-48cc-8d18-adf7efac86bb
@@ -68,6 +70,6 @@ jobs:
     - name: Deploy UI
       uses: bacongobbler/azure-blob-storage-upload@v1.0.0
       with:
-        source_dir: azure-ad-b2c/UI
+        source_dir: azure-ad-b2c/ie11-datapreload/UI
         container_name: ie11-datapreload
         connection_string: ${{ secrets.aitabeb2cui_ConnectionString }}
